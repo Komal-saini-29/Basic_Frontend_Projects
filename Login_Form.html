@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Aboreto', cursive;
+        }
+
+        .button-section button {
+      
+            font-size: 18px;
+            padding: 15px;
+            width: 12%;
+        }
+
+        .button-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .signup-btn {
+            background-color: rgb(5, 89, 89);
+             border: 1px solid rgb(31, 207, 207);
+        }
+
+        .login-btn {
+            color: white;
+            background-color: transparent;
+            border: 1px solid rgb(31, 207, 207);
+        }
+
+        .row-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          margin-top: 2%;
+            
+        }
+        .f-name{
+            margin-right: 2rem;
+            font-size: 18px;
+            padding: 5px;
+        }
+        .l-name{
+            padding: 5px;
+            font-size: 18px;
+        }
+        .email {
+            margin-top: 2rem;
+            width: 25.5% !important;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        .password{
+            margin-top: 1rem;
+            width: 25.5% !important;
+            font-size: 18px;
+            padding: 5px; 
+        }
+
+        .row-2, .btn-started{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .started-btn{
+            padding: 10px;
+            width: 25.8%;
+            margin: 2%;
+            font-size: 18px;
+            background-color: rgb(5, 89, 89);
+             border: 1px solid rgb(31, 207, 207);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Login Form</h1>
+    <form action="">
+        <div class="button-section flex ">
+            <button class="signup-btn">Sign up</button>
+            <button class="login-btn"> Log In</button>
+        </div>
+        <h1 style="text-align:center">Sign Up for Free</h1>
+        <div class="info-cont">
+            <div class="row-1">
+                <input type="text" placeholder="First Name" class="f-name">
+                <input type="text" placeholder="Last Name" class="l-name">
+            </div>
+            <div class="row-2">
+
+                <input type="text" placeholder="Email" style="width:18%" class="email"><br>
+
+
+                <input type="password" placeholder="Set a Password" class="password">
+            </div>
+        </div>
+        <div class="btn-started">
+            <button class="started-btn">GET STARTED</button>
+        </div>
+    </form>
+</body>
+
+</html>

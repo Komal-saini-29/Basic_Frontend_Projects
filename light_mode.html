@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 25px;
+            background-color: #fafafa;
+            color: black;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background 0.2s linear;
+        }
+body.dark{
+    background: #292C35;
+}
+        .label {
+            width: 55px;
+            height: 26px;
+            display: flex;
+            cursor: pointer;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            border-radius: 50px;
+            padding: 5px;
+            position: relative;
+            transform: scale(1.5);
+
+        }
+        
+
+        .fa-moon {
+            color: #f1c40f;
+
+        }
+
+        .fa-sun {
+            color: #f39c12;
+            font-size: 20px;
+
+        }
+
+        .ball {
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            top: 1.8px;
+            border-radius:50%;
+            left: 3.6px;
+            background-color: white;
+            transition: transform 0.2s linear;
+        }
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+  
+}
+.checked {
+        background: black;
+        color: white;
+      }
+.lightmode {
+        background: white;
+        color: black;
+      }
+
+     
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" class="checkbox checked" id="checkbox">
+        <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun" onclick="lightmode()"></i>
+            <div class="ball " onclick="checked()"></div>
+        </label>
+    </div>
+    
+
+
+    </div>
+    </div>
+
+<script>
+    const checkbox = document.getElementsById('checkbox');
+    checkbox.addeventListener('change',()=>{
+        //chnage the theme of the webstie
+        document.body.classList.toggle('dark');
+    }) ;
+    function checked() {
+          var element = document.body;
+  var content = document.getElementById("checked");
+  element.className = "checked";
+  content.innerText = "Light Mode is ON";
+        }
+    function lightmode() {
+          var element = document.body;
+  var content = document.getElementById("lightmode");
+  element.className = "lightmode";
+  content.innerText = "Light Mode is ON";
+        }
+</script>
+
+
+</body>
+
+</html>
